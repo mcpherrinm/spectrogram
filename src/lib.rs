@@ -4,7 +4,7 @@ extern crate goertzel;
 
 pub fn draw<P: AsRef<std::path::Path>>(wav: P, image: P) {
     let mut reader = hound::WavReader::open(wav).unwrap();
-    let sample_rate = reader.spec().sample_rate as f32;
+    let sample_rate = reader.spec().sample_rate;
     let samples: Vec<i16> = reader.samples().map(|x|x.unwrap()).collect();
     let mut image_data: Vec<u8> = vec![];
     let mut image_lines = 0;
