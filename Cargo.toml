@@ -1,0 +1,9 @@
+[package]
+name = "spectrogram"
+version = "0.1.0"
+authors = ["Matt McPherrin <git@mcpherrin.ca>"]
+
+[dependencies]
+goertzel="*"
+hound="*"
+image="*"
